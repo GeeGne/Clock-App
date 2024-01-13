@@ -21,7 +21,8 @@ const alarmButtonElement = document.querySelector('.js-alarm-button');
 
 let stopWatch;
 let timerID;
-let milliSeconds = 0;
+let milliSecondsRight = 0
+let milliSecondsLeft = 0;
 let secondsRight = 0;
 let secondsLeft = 0;
 let minutesRight = 0;
@@ -48,11 +49,18 @@ startButtonElement.addEventListener('click', () => {
     resetButtonElement.classList.add('reset-off');
 
     timerID = setInterval(() =>{
-      milliSeconds ++
-      if(milliSeconds === 100) {
-        milliSeconds = 0;
+      milliSecondsRight --
+
+      if(milliSecondsRight === -1) {
+        milliSecondsRight = 9;
+        milliSecondsLeft --;
+      }
+
+      if(milliSecondsLeft === -1) {
+        milliSecondsLeft = 9;
         secondsRight --;
       }
+
       if (secondsRight === -1) {
         secondsRight= 9;
         secondsLeft --;
@@ -199,7 +207,7 @@ function updateTimeDisplay () {
   ${minutesLeft}${minutesRight} :
    ${secondsLeft}${secondsRight}
    <span>.</span><div>
-   ${milliSeconds}</div>`;
+   ${milliSecondsLeft}${milliSecondsRight}</div>`;
 
    timeTitleElement.innerText = `
    ${hoursLeft}${hoursRight} : 
@@ -218,7 +226,8 @@ function errorMessageDisplay () {
 }
 
 function resetAllDigits () {
-  milliSeconds = 0;
+  milliSecondsRight = 0;
+  milliSecondsLeft = 0;
   secondsRight = 0;
   secondsLeft = 0;
   minutesRight = 0;

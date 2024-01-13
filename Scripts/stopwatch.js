@@ -10,7 +10,8 @@ const timeTitleDisplay = document.querySelector('.js-title');
 
 let stopWatch;
 let timerID;
-let milliSeconds = 0;
+let milliSecondsRight = 0;
+let milliSecondsLeft = 0;
 let secondsRight = 0;
 let secondsLeft = 0;
 let minutesRight = 0;
@@ -28,11 +29,18 @@ startButtonElement.addEventListener('click', () => {
   resetButtonElement.classList.add('reset-off');
 
   timerID = setInterval(() =>{
-    milliSeconds ++
-    if(milliSeconds === 100) {
-      milliSeconds = 0;
+    milliSecondsRight ++
+
+    if(milliSecondsRight === 10) {
+      milliSecondsRight = 0;
+      milliSecondsLeft ++;
+    }
+
+    if(milliSecondsLeft === 10) {
+      milliSecondsLeft = 0;
       secondsRight ++;
     }
+
     if (secondsRight === 10) {
       secondsRight= 0;
       secondsLeft ++;
@@ -58,8 +66,8 @@ startButtonElement.addEventListener('click', () => {
       hoursLeft ++
     }
     
-    timeTextElement.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSeconds}</div>`;
-    timeTitleDisplay.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSeconds}</div>`;
+    timeTextElement.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSecondsLeft}${milliSecondsRight}</div>`;
+    timeTitleDisplay.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}`;
   }, 10)
 });
 
@@ -73,14 +81,15 @@ pauseButtonElement.addEventListener('click', () =>{
 
 resetButtonElement.addEventListener('click', () =>{
   if(!stopWatch) {
-    milliSeconds = 0;
+    milliSecondsRight = 0;
+    milliSecondsLeft = 0;
     secondsRight = 0;
     secondsLeft = 0;
     minutesRight = 0;
     minutesLeft = 0;
     hoursRight = 0;
     hoursLeft = 0;
-    timeTextElement.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSeconds}</div>`;
-    timeTitleDisplay.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSeconds}</div>`;
+    timeTextElement.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}<span>.</span><div>${milliSecondsLeft}${milliSecondsRight}</div>`;
+    timeTitleDisplay.innerHTML = `${hoursRight}${hoursLeft} : ${minutesLeft}${minutesRight} : ${secondsLeft}${secondsRight}`;
   }
 });
