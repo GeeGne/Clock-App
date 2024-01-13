@@ -1,4 +1,4 @@
-<h1>Welcome to biggener series</h1>
+<h1>Welcome to bigenner series</h1>
 <h1>Clock App V1</h1>
 <h2>Features:</h2>features:
 - Two apps currently: 1. alarm app 2. stopwatch app
