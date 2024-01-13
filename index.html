@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="js-time-title">
+      Countdown Timer
+    </title>
+    <link rel="shortcut icon" href="Icons/countdown-icon.svg" sizes="16x16">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Rubik+Maps&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles/shared/general.css">
+    <link rel="stylesheet" href="Styles/shared/nav-bar.css">
+    <link rel="stylesheet" href="Styles/countdown.css">
+  </head>
+  <body>
+
+    <div class="error-message js-error">
+      Erorr: Please make sure to select the correct numbers
+    </div>
+    
+    <div class="nav-bar js-navbar">
+      <div class="nav-container clicked" data-page-name="index">
+        <img class="clicked-img" src="Icons/countdown-icon.svg">
+        <div class="clicked-text">
+          Timer
+        </div>
+      </div>
+      <div class="nav-container" data-page-name="stopwatch">
+        <img class="" src="Icons/stopwatch-icon.svg">
+        <div class="">
+          Stopwatch
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="container">
+
+      <div class="timer js-timer">
+        <div class="style-time js-time">
+          00 : 00 : 00<span>.</span><div>00</div>
+        </div>
+        <div class="alarm-message js-alarm-message">
+          Timer elapsed
+        </div>
+        <div class="alarm-button js-alarm-button">
+          <button>
+            Stop
+          </button>
+        </div>
+      </div>
+
+
+      <div class="time-select js-time-select">
+        <div class="data-container">
+          <div class="font">
+            Hours
+          </div>
+          <div>
+            <input type="text" class="js-hours-data style-input" id="inputField" list="hoursList">
+            <datalist class="js-hours-datalist" id="hoursList">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+            </datalist>
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="font">
+            Minutes
+          </div>
+          <div>
+            <input type="text" class="js-minutes-data style-input" id="inputField" list="minutesList">
+            <datalist class="js-minutes-datalist" id="minutesList">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+            </datalist>
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="font">
+            Seconds
+          </div>
+          <div>
+            <input type="text" class="js-seconds-data style-input" id="inputField" list="secondsList">
+            <datalist class="js-seconds-datalist" id="secondsList">
+              <option value="1">
+              <option value="2">
+              <option value="3">
+            </datalist>
+          </div>
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="start-button reset-off js-start">
+          Start
+        </button>
+        <button class="reset-button js-reset">
+          Reset
+        </button>
+      </div>
+
+    </div>
+
+    <script src="Scripts/countDownTimer.js" type="module">
+    </script>
+  </body>
+</html>

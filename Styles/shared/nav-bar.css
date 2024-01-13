@@ -1,0 +1,123 @@
+.nav-bar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  width: 90px;
+  background-color: rgb(202, 202, 202);
+  top: auto;
+  left: auto;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  cursor: pointer;
+  transition: padding ease 0.15s, color ease 0.15s, filter ease 0.15s;
+}
+
+.nav-container:hover {
+  padding: 10px 0;
+}
+
+.nav-bar .clicked {
+  background-color: #3D4755;
+  padding: 5px 0;
+}
+
+.nav-container:active {
+  background-color: #3D4755;
+  padding: 10px 0;
+}
+
+.nav-container img {
+  width: 40px;
+}
+
+.nav-container .clicked-img,
+.nav-container:active img {
+  filter: invert(1);
+}
+
+.nav-container div {
+  font-family: 'Roboto', Sans-serif;
+}
+
+.nav-container .clicked-text,
+.nav-container:active {
+  color: white;
+}
+
+.nav-bar .clicked:hover {
+  padding-top: 5px 0px;
+}
+
+@media screen and (max-width: 849px) {
+  .nav-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: 70px;
+    width: 180px;
+    background-color: rgb(202, 202, 202);
+    top: auto;
+    left: auto;
+    z-index: 100;
+    align-items: center;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container:hover {
+    padding: 0px 10px;
+  }
+  
+  .nav-bar .clicked {
+    background-color: #3D4755;
+    padding: 0px 5px;
+  }
+  
+  .nav-container:active {
+    background-color: #3D4755;
+    padding: 0px 10px;
+  }
+  
+  .nav-container img {
+    width: 40px;
+  }
+  
+  .nav-container .clicked-img,
+  .nav-container:active img {
+    filter: invert(1);
+  }
+  
+  .nav-container div {
+    font-family: 'Roboto', Sans-serif;
+  }
+  
+  .nav-container .clicked-text,
+  .nav-container:active {
+    color: white;
+  }
+  
+  .nav-bar .clicked:hover {
+    padding-top: 0px 5px;
+  }
+}

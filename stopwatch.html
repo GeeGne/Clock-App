@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class=js-title>
+      Stopwatch 
+    </title>
+    <link rel="shortcut icon" href="Icons/stopwatch-icon.svg" sizes="16x16">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Rubik+Maps&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles/shared/general.css">
+    <link rel="stylesheet" href="Styles/shared/nav-bar.css">
+    <link rel="stylesheet" href="Styles/stopwatch.css">
+  </head>
+  <body>
+
+    <div class="nav-bar js-navbar">
+      <div class="nav-container" data-page-name="index">
+        <img class="" src="Icons/countdown-icon.svg">
+        <div class="">
+          Timer
+        </div>
+      </div>
+      <div class="nav-container clicked" data-page-name="stopwatch">
+        <img class="clicked-img" src="Icons/stopwatch-icon.svg">
+        <div class="clicked-text">
+          Stopwatch
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="timer">
+        <div class="js-time font">
+          00 : 00 : 00<span>.</span><div>00</div>
+        </div>
+      </div>
+      <div class="button-container">
+        <img src="Icons/Play.svg" class="start-button js-start">
+        <img src="Icons/Pause.svg" class="pause-button timer-on js-pause">
+        <img src="Icons/Stop.svg" class="reset-button js-reset">
+      </div>
+    </div>
+    <script src="Scripts/stopwatch.js" type="module">
+    </script>
+  </body>
+</html>

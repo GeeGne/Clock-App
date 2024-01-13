@@ -1,0 +1,210 @@
+
+.error-message {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 420px;
+  height: 40px;
+  background-color: rgb(240, 125, 125);
+  font-family: 'Roboto', Sans-serif;
+  font-weight: bold;
+}
+
+.show {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh;
+  background-color: rgb(255, 242, 227);
+}
+
+.timer {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(61, 71, 85);
+  transition: background-color ease 0.25s;
+}
+
+.alarm-display-on {
+  background-color: rgb(122, 48, 48);
+  transition: background-color ease 0.25s;
+}
+
+.alarm-message {
+  position: absolute;
+  display: none;
+  color: #FFF2E3;
+  bottom: 25px;
+  left: 50px;
+  font-family: 'Roboto', Sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  z-index: 300;
+}
+
+.alarm-button {
+  position: absolute;
+  display: none;
+  bottom: 20px;
+  right: 50px;
+}
+
+.alarm-show {
+  display: flex;
+}
+
+.alarm-button button {
+  border: solid 2px #FFF2E3;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #FFF2E3;
+  background-color: rgba(122, 48, 48, 0);
+
+  padding: 8px 15px;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: opacity ease 0.15s;
+}
+
+.alarm-button button:hover {
+  opacity: 0.7;
+}
+
+
+.style-time {
+  position: relative;
+  display: flex;
+  font-size: 100px;
+  color: #FFF2E3;
+}
+
+.style-time span {
+  position: absolute;
+  bottom: 25px;
+  right: -2px;
+  font-size: 30px;
+  color: #FFF2E3;
+}
+
+
+.style-time div {
+  position: absolute;
+  font-size: 30px;
+  bottom: 25px;
+  right: -32px;
+  color: #FFF2E3;
+}
+
+@media screen and (max-width: 600px) {
+  .style-time {
+    position: relative;
+    display: flex;
+    font-size: 70px;
+    color: #FFF2E3;
+  }
+  
+  .style-time span {
+    position: absolute;
+    bottom: 16px;
+    right: -4px;
+    font-size: 25px;
+    color: #FFF2E3;
+  }
+  
+  
+  .style-time div {
+    position: absolute;
+    font-size: 25px;
+    bottom: 16px;
+    right: -30px;
+    color: #FFF2E3;
+  }
+}
+
+.timer .style-time {
+  font-family: 'Rajdhani', Sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex: 1;
+  align-items: start;
+  justify-content: center;
+}
+
+.button-container .start-button,
+.button-container .reset-button {
+  font-size: 30px;
+  margin-right: 10px;
+  border: none;
+  padding: 10px 15px;
+  background-color: rgb(162, 214, 226);
+  cursor: pointer;
+  border-radius: 5px;
+  transition: opacity 0.15s;
+}
+
+.button-container .start-button {
+  background-color: rgb(149, 223, 159);
+}
+
+.button-container button:hover {
+  opacity: 0.7;
+}
+
+.button-container .timer-on {
+  background-color: rgb(255, 61, 61);
+}
+
+.button-container .timer-on {
+  background-color: rgb(255, 61, 61);
+}
+
+.button-container .reset-off {
+  filter: grayscale(100%);
+  color: rgb(116, 116, 116);
+  cursor: default;
+}
+
+.button-container .reset-off:hover {
+  opacity: 1.0;
+}
+
+.time-select {
+  display: flex;
+  backgrond-color: lightpink;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+}
+
+.time-select .data-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+.time-select .data-container .font {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  color: rgb(72, 77, 52);
+  font-weight: 600;
+}
+
+.style-input {
+  background-color: #BEDEE2;
+  width: 40px;
+  border: solid 3px rgb(72, 77, 52);;
+}
